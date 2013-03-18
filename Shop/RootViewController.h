@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  RootViewController.h
 //  Shop
 //
 //  Created by Sanjeev Verma on 3/15/13.
@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UITableViewController
+@interface RootViewController : UITableViewController{
+    NSMutableArray *product;
+    
+}
 
 @end

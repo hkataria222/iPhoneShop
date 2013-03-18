@@ -9,10 +9,14 @@
 #import "AppDelegate.h"
 
 @implementation AppDelegate
+@synthesize window =_window;
+@synthesize navCont=_navCont;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    self.window.rootViewController=self.navCont;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 							
