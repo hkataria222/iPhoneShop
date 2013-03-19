@@ -29,7 +29,7 @@
 {
    
     [self makeData];
-    [self setTitle:@"SHOP"];
+    [self setTitle:@"JOHN JACOBS & CO."];
     
     [super viewDidLoad];
 
@@ -46,10 +46,10 @@
     women = [[NSMutableArray alloc] init] ;
     
     [men addObject:[[NSMutableDictionary alloc]
-                    initWithObjectsAndKeys:@"Sweater", @"name" ,
-                    @"sweater.png", @"image" ,
-                    @"Monte Carlo", @"description", @"$ 200", @"price" ,nil]];
-    [men addObject:[[NSMutableDictionary alloc]initWithObjectsAndKeys:@"Jackets",@"name",@"jacket.png",@"image",@"Leather Jacket",@"description",@"$ 250", @"price"  ,nil]];
+                    initWithObjectsAndKeys:@"Jackets", @"name" ,
+                    @"jacket.png", @"image" ,
+                    @"Edmonton Winter", @"description", @"Men's Winter Jacket", @"category" , @"$ 200", @"price" ,nil]];
+    [men addObject:[[NSMutableDictionary alloc]initWithObjectsAndKeys:@"Coats",@"name",@"sweater.png",@"image",@"Slopeside",@"description", @"Wool-blend Pea Coat", @"category", @"$ 250", @"price"  ,nil]];
     [women addObject:[[NSMutableDictionary alloc]initWithObjectsAndKeys:@"Jeans",@"name",@"jean.png",@"image",@"Levis",@"description",@"2500 Rupees", @"price", nil]];
     [women addObject:[[NSMutableDictionary alloc]initWithObjectsAndKeys:@"Shirt",@"name",@"shirt.png",@"image",@"Nike",@"description",@"2500 Rupees", @"price" ,nil]];
 }
@@ -149,6 +149,7 @@
         proDetail.proImageString = [[NSString alloc] initWithString:[[men objectAtIndex:indexPath.row]objectForKey:@"image"]];
         proDetail.proLabelString = [[NSString alloc] initWithString:[[men objectAtIndex:indexPath.row]objectForKey:@"description"]];
         proDetail.proPriceString = [[NSString alloc] initWithString:[[men objectAtIndex:indexPath.row]objectForKey:@"price"]];
+          proDetail.proCategoryString = [[NSString alloc] initWithString:[[men objectAtIndex:indexPath.row]objectForKey:@"category"]];
         proDetail.title=[[men objectAtIndex:indexPath.row]objectForKey:@"name"];
     }
     if(proInt == 1)

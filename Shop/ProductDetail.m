@@ -15,7 +15,7 @@
 @end
 
 @implementation ProductDetail
-@synthesize proImageString,proLabelString,proPriceString;
+@synthesize proImageString,proLabelString,proPriceString,proCategoryString;
 @synthesize nextCount;
 - (IBAction)buyNow:(id)sender {
     Payment *pay = [[Payment alloc] initWithNibName:@"Payment" bundle:nil];
@@ -37,13 +37,15 @@
     if(self.proImageString==@"sweater.png")
     {
     self.proImageString = @"sweater1.png";
-    self.proLabelString=@"Adidas";
+    self.proLabelString=@"Brooklyn";
+    self.proCategoryString=@"Men's Winter Coat";
     self.proPriceString=@"$ 300";
     }
         else if(self.proImageString==@"jacket.png")
         {
             self.proImageString = @"jacket1.png";
-            self.proLabelString=@"MonteCarlo";
+            self.proCategoryString = @"Down Jacket";
+            self.proLabelString=@"El Gordo";
             self.proPriceString=@"$ 350";
         }
         else if(self.proImageString==@"shirt.png")
@@ -76,6 +78,7 @@
     proImage.image = [UIImage imageNamed:proImageString];
     proLable.text=proLabelString;
     proPrice.text=proPriceString;
+    proCategory.text=proCategoryString;
     nextCount = 1;
 
     
